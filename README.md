@@ -1,17 +1,17 @@
 # Phishing Email Sample
 
-This repository contains a **phishing email** I personally received on **February 15, 2025**, purporting to be from “Wintermute Trading” and targeting my organization. I am sharing it here for **educational and security research purposes**—please do not use it for any illegal activities.
+This repository contains a **phishing email** I personally received on **February 15, 2025**, claiming to be from “Wintermute Trading.” The email targeted my organization. I am sharing it here for **educational and security research purposes** only—please do not use it for any illegal activities.
 
 ---
 
 ## 1. Overview
 
-- **Sender Claimed:** Wintermute Trading `<partnerships@wintermute.com>`
-- **Actual Source:** A different domain (e.g., `srv1862.main-hosting.eu` or `wintermute.business`)
+- **Alleged Sender:** Wintermute Trading `<partnerships@wintermute.com>`
+- **Actual Sending Domain:** Different from the header (e.g., `srv1862.main-hosting.eu` or `wintermute.business`)
 - **Subject:** **Wintermute & Scallop.io**
-- **Intended Purpose:** To deceive recipients into believing it’s a professional market-maker invitation and lure them into joining a suspicious Telegram group or clicking malicious links.
+- **Aim/Purpose:** To deceive recipients into thinking this is a legitimate market-maker invitation, enticing them to click suspicious links or join a phishing Telegram group.
 
-This email leverages a spoofed sender address, a professional-looking layout, and references to legitimate companies to lower the recipient’s guard.
+The email employs a spoofed sender address, professional formatting, and references to legitimate company names to lower the recipient’s defenses.
 
 ---
 
@@ -19,55 +19,55 @@ This email leverages a spoofed sender address, a professional-looking layout, an
 
 - [Wintermute & Scallop.io.eml](./Wintermute & Scallop.io.eml)
 
-Open this `.eml` file in any mail client or text editor to inspect the **full headers** and **HTML content**.  
-Some personal or confidential information may be redacted to protect privacy.
+You can open this `.eml` file with any mail client or text editor to inspect the **full headers** and **HTML content**.  
+Some personal or sensitive information may be redacted for privacy.
 
 ---
 
 ## 3. Key Indicators of Phishing
 
 1. **Suspicious Email Headers**  
-   - **DMARC Failure:** Shows the header domain (`wintermute.com`) does not match the actual sending domain.
-   - **SPF Pass but DMARC Fail:** Attackers exploit relay or Google Groups to bypass certain spam filters.
+   - **DMARC Failure:** The header domain (`wintermute.com`) doesn’t match the actual sending domain.  
+   - **SPF Pass but DMARC Fail:** Attackers can use relays or Google Groups to bypass some spam filters.
 
 2. **Brand Spoofing**  
-   - The email uses a real company’s logo and name, giving it a deceptive, professional appearance.
+   - The email leverages a genuine company’s logo and name, making it appear more credible and professional.
 
 3. **Malicious Links**  
-   - The message invites you to a Telegram group (`https://t.me/+xxxxxx`), which could be used to harvest information or facilitate fraud.
+   - The message contains a Telegram invite link (`https://t.me/+xxxxxx`), potentially used for fraud or data harvesting.
 
-4. **Mismatch Between Visible and Actual Domains**  
-   - The “From” line displays `@wintermute.com` while the envelope sender or mail path references different domains (e.g. `main-hosting.eu`).
+4. **Mismatch Between Displayed and Actual Domains**  
+   - Although it appears to be from `@wintermute.com`, the actual routing (envelope sender or relay info) points to other domains (e.g., `main-hosting.eu`).
 
 ---
 
-## 4. How to Analyze/Identify
+## 4. Analysis and Identification
 
 1. **Check the Original Headers**  
-   - In Gmail or other mail clients, use “Show Original” (or equivalent) to compare:
-     - **“From”** vs **“Envelope-From”**
+   - In Gmail or other mail clients, use “Show Original” (or similar) to compare:  
+     - **“From”** vs **“Envelope-From”**  
      - **SPF, DKIM, DMARC** results  
-   - Look for any sign of mismatch or DMARC failure.
+   - If there’s a mismatch or DMARC failure, be highly cautious.
 
 2. **Verify Domain Authenticity**  
-   - If the domain in the “From” field differs from the actual sending server, that’s a major red flag.
+   - If the “From” domain differs from the actual sending server, that’s a major red flag.
 
-3. **Scrutinize Links**  
-   - Never trust Telegram invites or unknown URLs at face value. Go through verified channels or contact the real company via their official website.
+3. **Be Careful with Links**  
+   - Never click a Telegram invite or unknown URL without verifying through official channels or the company’s main website.
 
-4. **Stay Alert for Impersonation**  
-   - Attackers often copy official branding to appear legitimate. Always double-check with the real organization when in doubt.
+4. **Watch Out for Impersonation**  
+   - Attackers often copy official branding to appear more authentic. When in doubt, confirm via the organization’s legitimate contact information.
 
 ---
 
-## 5. References & Further Reading
+## 5. Further Reading
 
 - [Google Support: How to Handle Phishing Emails](https://support.google.com/mail/answer/8253)
 - [Phishing.org: Phishing Basics](http://www.phishing.org/)
-- [DMARC Official Site](https://dmarc.org/) — For more on preventing spoofed emails
+- [DMARC Official Site](https://dmarc.org/) – Learn how to prevent domain spoofing
 
 ---
 
 ## 6. Disclaimer
 
-This repository and the sample email are provided strictly for educational purposes to help others recognize and analyze phishing attempts. **Do not** use any of the content or techniques here for illegal or unethical activities. Always follow best practices and organizational policies when handling suspicious messages.
+This repository and the included email sample are provided strictly for educational and security research purposes. **Do not** use any of the content or techniques here for illegal or unethical activities. Always follow best practices and your organization’s policies when handling suspicious emails.

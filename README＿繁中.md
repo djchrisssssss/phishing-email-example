@@ -17,7 +17,7 @@
 
 ## 2. 原始檔案
 
-- [Wintermute & Scallop.io.eml](./Wintermute & Scallop.io.eml)
+- [[Wintermute & Scallop.io.eml](./Wintermute & Scallop.io.eml)](https://github.com/djchrisssssss/phishing-email-example/blob/main/Wintermute%20%26%20Scallop.io.eml)
 
 可以使用任意郵件客戶端或文字編輯器，開啟此 `.eml` 檔案以檢視 **完整的郵件標頭** 與 **HTML 內容**。  
 部分個人或機敏資訊可能已被隱藏以保護隱私。

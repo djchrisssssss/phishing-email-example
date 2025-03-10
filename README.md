@@ -1,64 +1,73 @@
-# Phishing Email Example
+# Phishing Email Sample
 
-This repository contains a phishing email sample I personally received, shared here for learning and reference.  
-Please do not use it for any illegal activities.
+This repository contains a **phishing email** I personally received on **February 15, 2025**, purporting to be from “Wintermute Trading” and targeting my organization. I am sharing it here for **educational and security research purposes**—please do not use it for any illegal activities.
 
 ---
 
 ## 1. Overview
 
-- **Purported Sender:** Wintermute Trading `<partnerships@wintermute.com>`  
-- **Subject:** Wintermute & Scallop.io  
-- **Date:** February 15, 2025  
-- **Purpose:** Phishing attempt seeking to lure recipients into clicking suspicious links or joining a fake Telegram group.
+- **Sender Claimed:** Wintermute Trading `<partnerships@wintermute.com>`
+- **Actual Source:** A different domain (e.g., `srv1862.main-hosting.eu` or `wintermute.business`)
+- **Subject:** **Wintermute & Scallop.io**
+- **Intended Purpose:** To deceive recipients into believing it’s a professional market-maker invitation and lure them into joining a suspicious Telegram group or clicking malicious links.
 
-The email poses as a professional market-maker invitation, but is in fact crafted to deceive the recipient.
+This email leverages a spoofed sender address, a professional-looking layout, and references to legitimate companies to lower the recipient’s guard.
 
 ---
 
 ## 2. Original File
 
-- [phishing_email_sample.eml](./phishing_email_sample.eml) (or .txt)
+- [phishing_email_sample.eml](./phishing_email_sample.eml)
 
-You can open this file to see the full email headers and contents.  
-(Some personal info or sensitive data may be redacted.)
-
----
-
-## 3. Key Indicators
-
-1. **Suspicious Headers**  
-   - Traces show the actual sending source is not `wintermute.com` but a different domain (e.g., `main-hosting.eu`).  
-   - DMARC fails, but SPF might appear to pass due to relay or Google Groups usage.
-
-2. **Malicious or Suspicious Link**  
-   - The email includes a Telegram invite link (e.g., `https://t.me/+xxxxxx`) that could be used for fraud.
-
-3. **Spoofed Branding**  
-   - The content is styled with a professional layout and a brand logo to reduce suspicion.
+Open this `.eml` file in any mail client or text editor to inspect the **full headers** and **HTML content**.  
+Some personal or confidential information may be redacted to protect privacy.
 
 ---
 
-## 4. Analysis Steps
+## 3. Key Indicators of Phishing
 
-1. **Inspect Original Headers**  
-   - Use “Show Original” (in Gmail or any mail client) to compare the “From” vs. “Envelope-From,” along with SPF, DKIM, and DMARC results.
+1. **Suspicious Email Headers**  
+   - **DMARC Failure:** Shows the header domain (`wintermute.com`) does not match the actual sending domain.
+   - **SPF Pass but DMARC Fail:** Attackers exploit relay or Google Groups to bypass certain spam filters.
 
-2. **Watch Out for Fake Domains**  
-   - Notice the mismatch between `@wintermute.com` and the actual sending domain or server.
+2. **Brand Spoofing**  
+   - The email uses a real company’s logo and name, giving it a deceptive, professional appearance.
 
-3. **Be Cautious with Links**  
-   - Always verify official partnerships or brand invitations through known channels, rather than clicking unsolicited links.
+3. **Malicious Links**  
+   - The message invites you to a Telegram group (`https://t.me/+xxxxxx`), which could be used to harvest information or facilitate fraud.
+
+4. **Mismatch Between Visible and Actual Domains**  
+   - The “From” line displays `@wintermute.com` while the envelope sender or mail path references different domains (e.g. `main-hosting.eu`).
 
 ---
 
-## 5. References
+## 4. How to Analyze/Identify
+
+1. **Check the Original Headers**  
+   - In Gmail or other mail clients, use “Show Original” (or equivalent) to compare:
+     - **“From”** vs **“Envelope-From”**
+     - **SPF, DKIM, DMARC** results  
+   - Look for any sign of mismatch or DMARC failure.
+
+2. **Verify Domain Authenticity**  
+   - If the domain in the “From” field differs from the actual sending server, that’s a major red flag.
+
+3. **Scrutinize Links**  
+   - Never trust Telegram invites or unknown URLs at face value. Go through verified channels or contact the real company via their official website.
+
+4. **Stay Alert for Impersonation**  
+   - Attackers often copy official branding to appear legitimate. Always double-check with the real organization when in doubt.
+
+---
+
+## 5. References & Further Reading
 
 - [Google Support: How to Handle Phishing Emails](https://support.google.com/mail/answer/8253)
 - [Phishing.org: Phishing Basics](http://www.phishing.org/)
+- [DMARC Official Site](https://dmarc.org/) — For more on preventing spoofed emails
 
 ---
 
 ## 6. Disclaimer
 
-This repository is provided for educational and security research purposes only. Do not use the content for illegal or unethical activities.
+This repository and the sample email are provided strictly for educational purposes to help others recognize and analyze phishing attempts. **Do not** use any of the content or techniques here for illegal or unethical activities. Always follow best practices and organizational policies when handling suspicious messages.

@@ -17,7 +17,7 @@ This email leverages a spoofed sender address, a professional-looking layout, an
 
 ## 2. Original File
 
-- [phishing_email_sample.eml](./phishing_email_sample.eml)
+- [Wintermute & Scallop.io.eml](./Wintermute & Scallop.io.eml)
 
 Open this `.eml` file in any mail client or text editor to inspect the **full headers** and **HTML content**.  
 Some personal or confidential information may be redacted to protect privacy.
